@@ -1,0 +1,17 @@
+{
+  "name": "api-mess",
+  "version": "1.0.0",
+  "description": "mess around",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Test succeed\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.5",
+    "chart.js": "^4.4.1",
+    "react-chartjs-2": "^5.2.0",
+    "react-router-dom": "^6.21.2"
+  }
+}
