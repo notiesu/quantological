@@ -1,0 +1,24 @@
+.graph {
+    height: 75%;
+    width: 100%;
+}
+
+.graph-box {
+    height: 800px;
+    padding-block: 15px;
+    width: 60%;
+    object-fit: cover;
+    display: inline-flex;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.news-box {
+    height: 1600px;
+    width: 30%;
+    display: inline-block;
+    justify-content: center;
+    align-items: top;
+    padding: 10px;
+    position: absolute;
+}

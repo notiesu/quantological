@@ -1,23 +1,25 @@
+const axios = require('axios');
 const apiKey = 'FL3AL419PW80PMDT';
 
 //Retrieving documentation
-'use strict';
-var request = require('request');
-
 // replace the "demo" apikey below with your own key from https://www.alphavantage.co/support/#api-key
-var url = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&apikey=';
+var url = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&apikey=demo';
 
-request.get({
-    url: url + apiKey,
-    json: true,
-    headers: {'User-Agent': 'request'}
-  }, (err, res, data) => {
-    if (err) {
-      console.log('Error:', err);
-    } else if (res.statusCode !== 200) {
-      console.log('Status:', res.statusCode);
-    } else {
-      // data is successfully parsed as a JSON object:
-      console.log(data);
-    }
-});
+axios.get(url)
+  .then(response => {
+    const raw=response.data;
+    console.log(raw['Time Series (Daily)']);
+    /*
+    const timeData = raw['Time Series (Daily)'];
+    const dates = Object.keys(timeData);
+    const prices = Object.values(timeData);
+    console.log(dates);
+    console.log(prices);
+    */
+
+  })
+  .catch(error => {
+    console.log('Error');
+  })
+    
+  
